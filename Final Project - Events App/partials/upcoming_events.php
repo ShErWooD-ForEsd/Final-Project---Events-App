@@ -3,7 +3,7 @@ require_once __DIR__ . '/../data/functions.php';
 $events = events_all();
 ?>
 
-
+<!-- This is the basic list of upcoming events. Date was converted to something more easily read. -->
 <h2>Upcoming Events</h2>
 <table>
     <tr>

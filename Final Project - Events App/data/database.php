@@ -16,3 +16,5 @@ function get_pdo(): PDO
     ];
     return new PDO($dsn, $user, $password, $opt);
 }
+
+// This connects this app with the database so we can pull and push info into in from the user

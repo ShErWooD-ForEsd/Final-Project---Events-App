@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../data/functions.php';
 $events = events_all();
 ?>
-
+<!-- This lists out the events on one page with all the details for them -->
 <?php if (count($events) > 0): ?>
     <?php foreach ($events as $rows): ?>
         <h2><?= htmlspecialchars($rows['title']) ?></h2>

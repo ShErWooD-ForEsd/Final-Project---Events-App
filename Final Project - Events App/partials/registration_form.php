@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../data/functions.php';
 $events = events_all();
 ?>
-
+<!-- Registration form created for users to register for individual events to attend -->
 <form method="post">
     <h2>Events Registration Form</h2>
     <hr>

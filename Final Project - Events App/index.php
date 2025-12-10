@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/data/functions.php';
-
+// Starts the session for the login and requires a login for certain features, which is layed out in the switch area
 session_start();
 
 $view = filter_input(INPUT_GET, 'view') ?: 'events';
@@ -25,7 +25,7 @@ if (!$action && !in_array($view, $public_views, true)) {
     require_login();
 }
 
-
+// The action to login in, making sure user inputs the correct info to be able to enter the system.
 switch ($action) {
     case 'login':
         $username = trim((string)($_POST['username'] ?? ''));
@@ -46,7 +46,7 @@ switch ($action) {
             $view = 'login';
         }
         break;
-
+// Destroys the session
     case 'logout':
             $_SESSION = [];
             session_destroy();
@@ -54,7 +54,7 @@ switch ($action) {
             $view = 'login';
             break;    
 
-
+// This is meant to filter the info the user puts in and allow them to register for events.
     case 'create':
         $name = trim((string)(filter_input(INPUT_POST, 'name') ?? ''));
         $email = trim((string)(filter_input(INPUT_POST, 'email') ?? ''));
@@ -84,7 +84,7 @@ switch ($action) {
 </head>
 
 <body>
-
+<!-- attaches the navigation to the main page and puts in the various partials that the view could use.  -->
     <div>
         <h1>What's Going On, Springfield!</h1>
         <?php include __DIR__ . "/components/navigation.php"; ?><br><br>

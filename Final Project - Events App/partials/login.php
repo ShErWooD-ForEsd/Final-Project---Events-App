@@ -1,5 +1,5 @@
 <h2>Admin Login</h2>
-
+<!-- This incomplete page is meant to allow the admin to sign in to access the site -->
 <?php if (!empty($login_error)): ?>
     <div></div>
 <?php endif; ?>

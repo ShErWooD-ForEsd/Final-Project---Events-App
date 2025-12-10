@@ -7,3 +7,5 @@
     <!-- <a href="?view=management">Management</a> -->
   </div>
 </div>
+
+<!-- Navigation set up so I can find all the links necessary for the assignment -->
